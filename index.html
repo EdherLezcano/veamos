@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de Música</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="player">
         <h1>VEAMOS</h1>
-        
+        <button id="startButton">Iniciar Música</button>
+
         <!-- Primer reproductor de SoundCloud -->
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1805111013&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <div style="font-size: 10px; color: #cccccc;">
             <a href="https://soundcloud.com/revolterecs" title="REVOLTE" target="_blank" style="color: #cccccc; text-decoration: none;">REVOLTE</a> ·
             <a href="https://soundcloud.com/revolterecs/rp031-mystery-friend" title="RP#032 // MYSTERY FRIEND" target="_blank" style="color: #cccccc; text-decoration: none;">RP#032 // MYSTERY FRIEND</a>
         </div>
 
         <!-- Segundo reproductor de SoundCloud -->
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1918596692&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <div style="font-size: 10px; color: #cccccc;">
             <a href="https://soundcloud.com/radioelectronicajena" title="RADIO ELECTRONICA JENA" target="_blank" style="color: #cccccc; text-decoration: none;">RADIO ELECTRONICA JENA</a> ·
             <a href="https://soundcloud.com/radioelectronicajena/re-ritmo-terco-radio-show-ep-07-by-rush-city" title="RE - RITMO TERCO RADIO SHOW EP 07 by RUSH CITY" target="_blank" style="color: #cccccc; text-decoration: none;">RE - RITMO TERCO RADIO SHOW EP 07 by RUSH CITY</a>
         </div>
 
         <!-- Tercer reproductor de SoundCloud -->
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1907578463&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <div style="font-size: 10px; color: #cccccc;">
             <a href="https://soundcloud.com/francesco-tella" title="Nghtly" target="_blank" style="color: #cccccc; text-decoration: none;">Nghtly</a> ·
             <a href="https://soundcloud.com/francesco-tella/nghtly-030824-oblivion-przychodnia-sklot-warsaw-polonia" title="Nghtly - 03.08.24 @OBLIVION / Przychodnia Skłot - WARSAW (POLONIA)" target="_blank" style="color: #cccccc; text-decoration: none;">Nghtly - 03.08.24 @OBLIVION / Przychodnia Skłot - WARSAW (POLONIA)</a>
         </div>
 
         <!-- Cuarto reproductor de SoundCloud -->
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1659595887&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <div style="font-size: 10px; color: #cccccc;">
             <a href="https://soundcloud.com/lowprofileradio" title="Low Profile Radio" target="_blank" style="color: #cccccc; text-decoration: none;">Low Profile Radio</a> ·
             <a href="https://soundcloud.com/lowprofileradio/fusion-dance-session-028-jack-the-groove-futurhythm-set" title="Fusion Dance Session 028 - Jack The Groove &quot;Futurhythm Mix&quot;" target="_blank" style="color: #cccccc; text-decoration: none;">Fusion Dance Session 028 - Jack The Groove &quot;Futurhythm Mix&quot;</a>
         </div>
 
     </div>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Esto activa el AudioContext de forma segura
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            audioContext.resume().then(() => {
+                console.log('AudioContext resumed');
+            });
+        });
+    </script>
 </body>
 </html>
