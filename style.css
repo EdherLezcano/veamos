@@ -35,3 +35,20 @@ body {
     color: #ff5500; /* Color de los enlaces */
     text-decoration: none; /* Sin subrayado */
 }
+
+/* Estilos para el botón */
+button {
+    display: block; /* Mostrar como bloque */
+    margin: 20px auto; /* Centrar horizontalmente */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #ff5500; /* Color del botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+button:hover {
+    background-color: #e64a00; /* Color del botón al pasar el cursor */
+}
